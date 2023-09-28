@@ -3,27 +3,27 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 
-const lato = Lato({ 
-  subsets: ['latin'],
-  weight: ['400', '700']
- })
+const lato = Lato({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+})
 
 export const metadata: Metadata = {
-  title: 'It',
-  description: 'Front end',
+    title: 'It',
+    description: 'Front end',
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={lato.className}>
-        <Header/>
-        {children}
-        </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <body className={lato.className}>
+                <Header />
+                {children}
+            </body>
+        </html>
+    )
 }
